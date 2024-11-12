@@ -52,9 +52,9 @@ class Pokemon:
         self.of_type = of_type
 
     def attack(self, pokemon):
-
-     pokemon.health -= self.power * attacchi[self.of_type][pokemon.of_type]
-     print(f"{self.name} attack {pokemon.name} doing to it a damage of {self.power} health points")
+     new_power = self.power * attacchi[self.of_type][pokemon.of_type]
+     pokemon.health -= new_power
+     print(f"{self.name} attack {pokemon.name} doing to it a damage of {new_power} health points")
      print(f"Now the {pokemon.name} health is of {pokemon.health} points")
 
 
